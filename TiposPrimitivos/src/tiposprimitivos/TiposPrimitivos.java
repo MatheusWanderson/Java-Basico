@@ -5,6 +5,8 @@
  */
 package tiposprimitivos;
 
+import java.util.Scanner;
+
 /**
  *
  * @author wande
@@ -16,9 +18,12 @@ public class TiposPrimitivos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String nome = "Wanderson";
-        float nota = 8.5f;
-        System.out.printf("A nota de %s é %.4f \n", nome, nota );
+        System.out.print("Digite o nome do aluno: ");
+        Scanner teclado = new Scanner(System.in);
+        String nome = teclado.nextLine();
+        System.out.print("Digite a nota do aluno: ");
+        float nota = teclado.nextFloat();
+        System.out.printf("A nota de %s é %.1f \n", nome, nota );
     }
     
 }
