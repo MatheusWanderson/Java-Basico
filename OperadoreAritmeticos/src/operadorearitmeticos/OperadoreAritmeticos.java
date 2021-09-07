@@ -29,6 +29,7 @@ public class OperadoreAritmeticos {
         int x = 4;
         x += 2; // x = x+2
         System.out.println(x);
+        
     }
     
 }
