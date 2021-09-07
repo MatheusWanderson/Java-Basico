@@ -26,9 +26,13 @@ public class OperadoreAritmeticos {
         System.out.println(valor);
         System.out.println(numero);*/
         
-        int x = 4;
+        /*int x = 4;
         x += 2; // x = x+2
-        System.out.println(x);
+        System.out.println(x);*/
+        
+        float v = 8.3f;
+        int ar = (int) Math.floor(v);;
+        System.out.println(ar);
         
     }
     
