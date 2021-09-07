@@ -30,9 +30,13 @@ public class OperadoreAritmeticos {
         x += 2; // x = x+2
         System.out.println(x);*/
         
-        float v = 8.3f;
+        /*float v = 8.3f;
         int ar = (int) Math.floor(v);;
-        System.out.println(ar);
+        System.out.println(ar);8*/
+        
+        double ale = Math.random();
+        int n = (int) (5 + ale * (10-5));
+        System.out.println(n);
         
     }
     
