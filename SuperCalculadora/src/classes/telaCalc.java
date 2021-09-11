@@ -46,6 +46,7 @@ public class telaCalc extends javax.swing.JFrame {
         lblAbs = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Digite um valor");
@@ -194,8 +195,15 @@ public class telaCalc extends javax.swing.JFrame {
         
         //RAIZ QUADRADA
         double rq = Math.sqrt(num);
-        lblRaizQ.setText(String.format("%.2f", rq));
+        lblRaizQ.setText(String.format("%.4f", rq));
         
+        //RAIZ CUBICA
+        double rc = Math.cbrt(num);
+        lblRaizC.setText(String.format("%.2f", rc));
+        
+        //VALOR ABSOLUTO         
+        int abs = Math.abs(num);
+        lblAbs.setText(Integer.toString(abs));
         
         
         panCalc.setVisible(true);
