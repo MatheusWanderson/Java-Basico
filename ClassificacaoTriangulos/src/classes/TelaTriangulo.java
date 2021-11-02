@@ -16,6 +16,7 @@ public class TelaTriangulo extends javax.swing.JFrame {
      */
     public TelaTriangulo() {
         initComponents();
+        panRes.setVisible(false);
     }
 
     /**
@@ -30,94 +31,95 @@ public class TelaTriangulo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jSlider1 = new javax.swing.JSlider();
+        sliA = new javax.swing.JSlider();
         jSlider2 = new javax.swing.JSlider();
-        jSlider3 = new javax.swing.JSlider();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        sliC = new javax.swing.JSlider();
+        lblA = new javax.swing.JLabel();
+        lblB = new javax.swing.JLabel();
+        lblC = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnVerificar = new javax.swing.JButton();
+        sliB = new javax.swing.JSlider();
+        panRes = new javax.swing.JPanel();
+        lblStatus = new javax.swing.JLabel();
+        lblTipo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Segmento A");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Segmento B");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 88, -1, -1));
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("Segmento c");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 138, -1, -1));
+        getContentPane().add(sliA, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 34, 130, -1));
+        getContentPane().add(jSlider2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 78, 0, -1));
+        getContentPane().add(sliC, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 130, -1));
 
-        jLabel4.setText("jLabel4");
+        lblA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblA.setText("0");
+        getContentPane().add(lblA, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, -1, -1));
 
-        jLabel5.setText("jLabel5");
+        lblB.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblB.setText("0");
+        getContentPane().add(lblB, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, -1));
 
-        jLabel6.setText("jLabel6");
+        lblC.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblC.setText("0");
+        getContentPane().add(lblC, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, -1, -1));
 
-        jLabel7.setText("jLabel7");
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/tri.png"))); // NOI18N
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
 
-        jButton1.setText("jButton1");
+        btnVerificar.setText("Verificar");
+        btnVerificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerificarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVerificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 181, -1, -1));
+        getContentPane().add(sliB, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 130, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 340, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addGap(40, 40, 40))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        lblStatus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblStatus.setText("Forma ou não?");
+
+        lblTipo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTipo.setText("Tipo de triângulo");
+
+        javax.swing.GroupLayout panResLayout = new javax.swing.GroupLayout(panRes);
+        panRes.setLayout(panResLayout);
+        panResLayout.setHorizontalGroup(
+            panResLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel7)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5)))
-                    .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        panResLayout.setVerticalGroup(
+            panResLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panResLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(lblStatus)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(36, 36, 36)
-                .addComponent(jButton1)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addComponent(lblTipo)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
+
+        getContentPane().add(panRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 420, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,16 +157,20 @@ public class TelaTriangulo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnVerificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JSlider jSlider1;
     private javax.swing.JSlider jSlider2;
-    private javax.swing.JSlider jSlider3;
+    private javax.swing.JLabel lblA;
+    private javax.swing.JLabel lblB;
+    private javax.swing.JLabel lblC;
+    private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblTipo;
+    private javax.swing.JPanel panRes;
+    private javax.swing.JSlider sliA;
+    private javax.swing.JSlider sliB;
+    private javax.swing.JSlider sliC;
     // End of variables declaration//GEN-END:variables
 }
