@@ -58,8 +58,24 @@ public class TelaTriangulo extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Segmento c");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 138, -1, -1));
+
+        sliA.setMaximum(20);
+        sliA.setValue(0);
+        sliA.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sliAStateChanged(evt);
+            }
+        });
         getContentPane().add(sliA, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 34, 130, -1));
         getContentPane().add(jSlider2, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 78, 0, -1));
+
+        sliC.setMaximum(20);
+        sliC.setValue(0);
+        sliC.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sliCStateChanged(evt);
+            }
+        });
         getContentPane().add(sliC, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 130, -1));
 
         lblA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -84,14 +100,24 @@ public class TelaTriangulo extends javax.swing.JFrame {
                 btnVerificarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVerificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 181, -1, -1));
+        getContentPane().add(btnVerificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 175, 100, 40));
+
+        sliB.setMaximum(20);
+        sliB.setValue(0);
+        sliB.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sliBStateChanged(evt);
+            }
+        });
         getContentPane().add(sliB, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 130, -1));
 
         lblStatus.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblStatus.setForeground(new java.awt.Color(51, 102, 255));
         lblStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStatus.setText("Forma ou não?");
 
         lblTipo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTipo.setForeground(new java.awt.Color(255, 51, 51));
         lblTipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTipo.setText("Tipo de triângulo");
 
@@ -119,7 +145,41 @@ public class TelaTriangulo extends javax.swing.JFrame {
 
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
         // TODO add your handling code here:
+
+        int a = sliA.getValue();
+        int b = sliB.getValue();
+        int c = sliC.getValue();
+        if (a < b + c && b < a + c && c < a + b) {
+            lblStatus.setText("Formam um triangulo");
+            if (a == b && b == c) {
+                lblTipo.setText("Equilátero");
+            } else if (a != b && b != c && a != c)
+            {
+                lblTipo.setText("Escaleno");
+            } else {
+                  lblTipo.setText("isósceles");    
+            }
+        } else {
+            lblStatus.setText("Não Formam um triangulo");
+            lblTipo.setText("__________");
+        }
+        panRes.setVisible(true);
     }//GEN-LAST:event_btnVerificarActionPerformed
+
+    private void sliAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliAStateChanged
+        // TODO add your handling code here:
+        lblA.setText(Integer.toString(sliA.getValue()));
+    }//GEN-LAST:event_sliAStateChanged
+
+    private void sliBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliBStateChanged
+        // TODO add your handling code here:
+        lblB.setText(Integer.toString(sliB.getValue()));
+    }//GEN-LAST:event_sliBStateChanged
+
+    private void sliCStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliCStateChanged
+        // TODO add your handling code here:
+        lblC.setText(Integer.toString(sliC.getValue()));
+    }//GEN-LAST:event_sliCStateChanged
 
     /**
      * @param args the command line arguments
