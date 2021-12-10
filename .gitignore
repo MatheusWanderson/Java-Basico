@@ -110,3 +110,15 @@ hs_err_pid*
 /funcao01/build/
 /funcao02/nbproject/private/
 /funcao02/build/
+/teste/nbproject/private/
+/teste/build/
+teste/manifest.mf
+teste/build.xml
+teste/lib/nblibraries.properties
+teste/nbproject/genfiles.properties
+teste/nbproject/project.properties
+teste/nbproject/build-impl.xml
+teste/nbproject/project.xml
+teste/src/teste/Teste.java
+/Aula02/nbproject/private/
+/Aula02/build/
